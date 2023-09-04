@@ -1,0 +1,23 @@
+# RETO - VALIDAR CONTRASEÑA
+
+
+contraseña1 = input("Escriba una contraseña, la cual deberá empezar con algún número: ")
+
+for i in contraseña1:
+    if i.isdigit():
+        contraseña2 = input("Ahora, coloque de nuevo su contraseña para verificarla: ")       
+        while contraseña1 != contraseña2:
+            print("Error, las contraseñas ingresadas no coinciden, intentelo de nuevo, a los 3 intentos se cerrara el programa, intento 1")
+            contraseña2 = input("Vuelva a escribir de nuevo su contraseña: ")
+            print("Error, las contraseñas ingresadas no coinciden, intentelo de nuevo, intento 2")
+            contraseña2 = input("Vuelva a escribir de nuevo su contraseña: ")
+            print("Error, las contraseñas ingresadas no coinciden, intentelo de nuevo, intento 3")
+            contraseña2 = input("El programa se cierra")
+            break
+        else:
+            if contraseña1 == contraseña2:
+                print("Las contraseñas son correctas")
+                break
+    else: 
+        print("Error, la contraseña debe empezar con un número, vuelva a empezar")
+        break     
